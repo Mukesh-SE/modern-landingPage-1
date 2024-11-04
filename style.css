@@ -54,7 +54,6 @@ main {
 }
 
 #nav {
-  pointer-events: all;
   width: 100%;
   padding: 20px 0;
   display: flex;
@@ -87,15 +86,17 @@ main {
 .nleft img {
   height: 60px;
   mix-blend-mode: screen;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 #nav a {
   text-decoration: none;
   font-size: 0.8rem;
   text-transform: uppercase;
+  pointer-events: all;
   color: aliceblue;
   letter-spacing: 1px;
   transition: opacity 0.5s ease-in-out;
+
 }
 
 #hero {
