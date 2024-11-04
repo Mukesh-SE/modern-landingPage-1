@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@font-face {
+  font-family: "Kajiro";
+  src: url("./src/fonts/KajiroBold.ttf");
+  font-weight: normal;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+#back,
+#front {
+  width: 100%;
+  height: 100vh;
+}
+
+#back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+#front {
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(30, 32, 30, 0.2);
+}
+#workingarea {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  min-height: 100vh;
+  height: 100%;
+  max-width: 1920px;
+}
+
+#nav {
+  pointer-events: all;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav .nleft,
+#nav .nright {
+  height: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  column-gap: 20px;
+}
+.nright {
+  & a {
+    transition: all 0.5s ease-in;
+  }
+
+  &:hover a {
+    opacity: 0.5;
+  }
+
+  &:hover a:hover {
+    opacity: 1;
+  }
+}
+
+.nleft img {
+  height: 60px;
+  mix-blend-mode: screen;
+}
+#nav a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: aliceblue;
+  letter-spacing: 1px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#hero {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hleft {
+  min-width: 50%;
+  /* background-color: #37afe1; */
+
+  & button {
+    padding: 0.8rem 1.5rem;
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top: 2rem;
+    pointer-events: all;
+    cursor: pointer;
+  }
+}
+.elem {
+  position: relative;
+  height: 9vw;
+  /* background-color: red; */
+  overflow: hidden;
+
+  & h1 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-family: "Kajiro";
+    line-height: 0.9;
+    text-transform: uppercase;
+    font-size: 10vw;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+
+  & h1:nth-child(1){
+    top: 0;
+  }
+}
+
+
+.hright {
+  padding: 1rem;
+  color: #fff;
+  width: 25%;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  /* backdrop-filter: blur(8px); */
+  /* box-shadow: 2.5px 2.5px 010px rgba(255, 255, 255, 0.2); */
+  /* border: 1px solid #fff; */
+  /* border-radius: 30px; */
+
+  & .imgWrapper {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    height: 140px;
+    background-image: url("./src/images/heroRightImage.jpg");
+    background-size: cover;
+    background-position: 0% 10%;
+    border-radius: 30px;
+    position: relative;
+  }
+  & p {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+
+  & p:nth-child(3) {
+    margin-bottom: 1.2rem;
+  }
+}
