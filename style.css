@@ -87,6 +87,7 @@ main {
 .nleft img {
   height: 60px;
   mix-blend-mode: screen;
+  pointer-events: none;
 }
 #nav a {
   text-decoration: none;
